@@ -1,0 +1,93 @@
+<!-- miniprogram/pages/home/home.wxml -->
+<view class="home">
+	<!-- 头部 -->
+		<view class="header">
+		  	<!-- 本月结余 -->
+				<view class="top">
+						<view class="top-title">本月结余</view>
+						<view class="top-tatal">
+								{{sum.intage}}
+								<text class="small">.{{sum.float}}</text>
+						</view>
+				</view>
+				<!-- 本月收入与结余 -->
+				<view class="bootm  clearfix ">
+						<view class="bootm-item ">
+								<view class="bootm-title ">本月收入</view>
+								<view class="bootm-qian ">
+										{{monthcost.shouru}}
+										<!-- <text class="small">00</text> -->
+								</view>
+						</view>
+						<view class=" bootm-item xian ">|</view>
+						<view class="bootm-item ">
+								<view class="bootm-title ">本月支出</view>
+								<view class="bootm-qian ">
+											{{monthcost.zhichu}}
+										<!-- <text class="small">00</text> -->
+								</view>
+						</view>
+				</view>
+		</view>
+		<!-- 搜索栏 -->
+		<view class="biejin">
+				<view class="search">
+					<navigator class="recad" open-type="switchTab" url="../record/record">
+						<view class="text">
+								<view class="ico">
+										<image class="search-bg" src="cloud://yang-serve-ahcrg.7961-yang-serve-ahcrg-1302176514/微信图片_20200521011302.png"></image>
+								</view>
+								<view class="text-cont">记账单</view>
+						</view>
+					</navigator>
+					<view class="tab-book">切换账本</view>
+				</view>
+		</view>
+		<!-- 小导航栏 -->
+		<view class="content">
+			  <!-- 日期与支出收入 -->
+				<view class="date ">
+						<view class="date-title">
+								<text>{{selecttime }}</text>
+								<text wx:if="{{isToday}}">今日</text>
+								<text>收入：{{cost.shouru}}</text>						
+								<text>支出：{{cost.zhichu}}</text>
+
+						</view>
+				</view>
+				<!-- 更多三点 -->
+				<view class="more">
+						<picker class="date-picker" mode="date" start="{{dateRange.start}}" end="{{dateRange.end}}" bindchange="setDate" data-title="datetime">
+							<view class="more-item">
+									<text></text>
+									<text></text>
+									<text></text>
+							</view>
+						</picker>
+				</view>
+		</view>
+		<!-- 记账列表 -->
+		<view class="item-list" wx:for="{{arr}}" wx:key="*this" wx:for-item="arr">
+				<!-- 左边图标 -->
+				<view class="item-ico fl">
+						<image class="img" mode="widthFix" src="{{arr.ico}}"></image>
+				</view>
+				<!-- 右边内容 -->
+				<view class="item fr">
+				  	<!-- 文字部分 -->
+						<view class="item-text">
+								<view class="text-title">{{arr.ico_title}}</view>
+								<view class="text-content">{{arr.beizhu}}</view>
+						</view>
+						<!-- 金钱部分 -->
+						<view class=" moneny ">
+								<view class="item-money {{(arr.cost=='收入')?'income':'pay'}}">
+										<!-- <view class="item-money pay"> -->
+										<text class="fuhao" wx:if="{{arr.cost== '收入'}}">+</text>
+										<text class="fuhao" wx:else>-</text>
+										<text class="num">￥{{arr.money}}</text>
+								</view>
+						</view>
+				</view>
+		</view>
+</view>

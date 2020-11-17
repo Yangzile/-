@@ -1,0 +1,8 @@
+<view class="Myheader">
+  {{cData}}
+  <view class="Myheader-view">
+    <slot class="header">
+    
+    </slot>
+  </view>
+</view>

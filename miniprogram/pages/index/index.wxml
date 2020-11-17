@@ -1,0 +1,64 @@
+<!-- <view class="container">
+    <canvas canvas-id="pieCanvas" class="canvas" style="height:300px" bindtouchstart="touchHandler"></canvas>
+</view> -->
+<wxs module="typeTo" src="./typeTo.wxs"></wxs>
+<view class="main">
+  <!-- 导航栏 -->
+  <view class="nav">
+    <view class="year" data-type = "isYear" bindtap="showItem">
+      <view class="year-title">
+        <view class="title">{{currentyear}}年</view>
+        <image class="year-ico" src="../../images/jiantou.png" />
+      </view>
+      <view class="year-list {{isYear?'showyear':''}}"  >
+        <view class="year-item" bindtap="selectYear" data-year="{{item}}" wx:for="{{yearlist}}" wx:key="index" >{{item}}年</view>
+      </view>
+    </view>
+    <view class="month">
+      <view class="month-list" >
+        <view class="month-item {{item.isAct?'active':''}}" bindtap="selectMonth" wx:for="{{monthlist}}" 
+         wx:key="index" data-isAct="{{item.isAct}}" data-month="{{item.num}}">{{typeTo.toNumber(item.num)}}月</view>
+      </view>
+    </view>
+    <view class="day" data-type = "isDate" bindtap="showItem">
+      <view class="day-box">
+        <view class="xian"></view>
+        <view class="shaixuan">筛选</view>
+        <image src="../../images/shaixuan.png" />
+      </view>
+      <view class="day-list {{isDate?'showdate':''}}" >
+        <view class="day-item {{item.isAct?'active':''}}" catchtap="selectDate" wx:for="{{daylist}}" wx:key="index"  data-day="{{item.num}}" data-isAct="{{item.isAct}}">{{typeTo.toNumber(item.num)}}日</view>
+        <!-- <view class="day-item">1日</view>
+        <view class="day-item">1日</view>
+        <view class="day-item">1日</view>
+        <view class="day-item">1日</view> -->
+      </view>
+    </view>
+  </view>
+ 
+  <!--<view class="sum-year" wx:for="{{yearcost}}">
+    <view class="icnner-box {{yearcost[0].isAct?'active':''}}" data-index="{{index}}">
+      <view class="title">{{yearcost[0].title}}</view>
+      <view class="money">{{yearcost[0].money}}</view>
+    </view>
+    <view class="pay-box {{yearcost[1].isAct?'active':''}}">
+      <view class="title">{{yearcost[1].title}}</view>
+      <view class="money">{{yearcost[1].money}}</view>
+    </view>
+  </view> -->
+
+   <!-- 年度收入支出总结 -->
+  <view class="sum-year">
+    <view class="title-item" wx:for="{{yearcost}}" wx:key="index" bindtap="toggleTap" data-index="{{index}}" data-title="{{item.title}}">
+      <view class="title-item-content {{item.type}} {{item.isAct ? 'act' : ''}}"> 
+        <view class="title-text">{{item.title}}</view>
+        <view class="title-money">￥{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 图表 -->
+  <view class="pie">
+     <canvas canvas-id="pieCanvas" class="canvas"  bindtouchstart="touchHandler"></canvas>
+  </view>
+  <!-- 内容 -->
+</view>

@@ -1,0 +1,5 @@
+/* compoment/Myheader/Myheader.wxss */
+.Myheader{
+  font-size: 16px;
+  color: red;
+}

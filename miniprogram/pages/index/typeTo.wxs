@@ -1,0 +1,8 @@
+var filters = {
+  toNumber: function (value) {
+    return Number(value).toString()//此处2为保留两位小数
+  }
+}
+module.exports = {
+  toNumber: filters.toNumber
+}

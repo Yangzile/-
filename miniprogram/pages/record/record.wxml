@@ -1,0 +1,82 @@
+<view class="record">
+		<!-- 头部 -->
+		<view class="header"></view>
+		<!-- 内容 -->
+		<view class="content">
+				<!-- 类型 -->
+				<view class="type">
+						<!-- 标题 -->
+						<view class="type-title clearfix">
+								<view class="title-item fl {{item.isActive ?'active':''}}" wx:for="{{tabData}}" wx:key="index" bindtap="toggleTab" data-active="{{item.isActive}}" data-index="{{index}}" data-name="tabData">
+										{{item.title}}
+								</view>
+								<!-- <view class="title-item fl">收入</view> -->
+						</view>
+						<!-- 分类 -->
+						<view class="type-item">
+								<swiper class="swiper" indicator-dots="ture" indicator-active-color="#f4ea2a"  indicator-color="#353434" autoplay="true" interval="100000">
+										<block wx:for="{{arr}}" wx:key="index">
+												<swiper-item> 
+														<view class="swiper-item">
+																<view class="banner-content fl clearfix">
+																		<view class="content-item {{book_item.isActive ?'active':''}}" wx:for="{{item}}" wx:key="id" wx:for-index="id"
+																		 wx:for-item="book_item" data-index="{{index}}" data-id="{{id}}" bindtap="selectBook">
+																				<view class="item-icon ">
+																						<image mode="aspectFit" src="{{book_item.icon_url}}"></image>
+																				</view>
+																				<view class="item-title">{{book_item.title}}</view>
+																		</view>
+																</view>
+														</view>
+												</swiper-item>
+										</block>
+								</swiper>
+						</view>
+				</view>
+				<!-- 账户选择 -->
+				<view class="account">
+						<view class="account-title">
+								<text class="iconfont icon-qianbao "></text>
+								<text class="choice-wenzi">账户选择</text>
+						</view>
+						<view class="account-choice">
+								<view class="choice-item {{item.isActive ?'active':''}}" wx:for="{{selsectData}}" wx:key="index" bindtap="toggleTab" data-active="{{item.isActive}}" data-index="{{index}}" data-name="selsectData">
+										{{item.title}}
+								</view>
+						</view>
+				</view>
+				<!-- 信息 -->
+				<view class="info">
+						<!-- 记账时间 -->
+						<view class="info-box">
+								<picker class="date-picker" mode="date" start="{{dateRange.start}}" end="{{dateRange.end}}" bindchange="getInfo" data-title="datetime">
+										<view class="data-p">
+												<view class="data-tile">日期</view>
+												<view class="data-time">{{input_info.datetime}}</view>
+										</view>
+								</picker>
+						</view>
+						<!-- 金额 -->
+						<view class="info-box">
+								<view class="money-tile">金额</view>
+								<view class="money-input">
+										<input type="digit" name="money" id="money-input" placeholder="请输入金额！" maxlength="80" confirm-type="done" bindchange="getInfo" data-title="money" value="{{input_info.money}}"/>
+								</view>
+						</view>
+						<!-- 备注 -->
+						<view class="info-box">
+								<view class="beizhu-tile">备注</view>
+								<view class="beizhu-input">
+										<input type="text" placeholder="请输入备注！" name="beizhu" id="beizhu-input"  confirm-type="done" bindchange="getInfo" data-title="beizhu" value="{{input_info.beizhu}}"/>
+								</view>
+						</view>
+				</view>
+				<!-- 保存按钮 -->
+				<view class="save-box">
+					<view class="save" bindtap="getdata">保存</view>
+					<button wx:if="{{!isAuth}}" class="btn" open-type="getUserInfo"
+					 bindgetuserinfo="onGetUserInfo"></button>
+				</view>
+				
+		</view>
+</view>

@@ -1,0 +1,64 @@
+{
+  "pages": [
+    
+    "pages/home/home",
+    "pages/record/record",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/test/test",
+    "pages/test1/test1",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f4ea2a",
+    "navigationBarTitleText": "豆子的账本",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 10
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/icon-tab1.png",
+        "selectedIconPath": "./images/icon-tab1-actiove.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "记账",
+        "iconPath": "./images/icon-tab2.png",
+        "selectedIconPath": "./images/icon-tab2-actiove.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "报表",
+        "iconPath": "./images/tubiao1.png",
+        "selectedIconPath": "./images/tubiao2.png"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "我的",
+        "iconPath": "./images/icon-tab4.png",
+        "selectedIconPath": "./images/icon-tab4-actiove.png"
+      }
+    ],
+    "position": "bottom",
+    "selectedColor": "#f4ea2a",
+    "color": "#2c2c2c"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ]
+}

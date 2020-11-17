@@ -1,0 +1,73 @@
+
+.event-list{
+  background-color: #fafbfc;
+  padding: 20px 0;
+  }
+.event-link{
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow:5rpx 8rpx 10rpx rgba(53,178,225,0.26);
+  /* box-shadow:水平距离 垂直距离 模糊大小 颜色 */
+  overflow: hidden;
+}
+.event-img image{
+  width: 100%;
+  }
+.event-content{
+  padding: 25rpx;
+  }
+.event-title{
+  line-height: 1.7em;
+  }
+.event-desc{
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5em;
+  font-weight: 200;
+  }
+.event-box{
+  margin-top: 15px;
+  overflow: hidden;
+  }
+.event-address,.event-time{
+  float: left;
+  color: #cecece;
+  font-size: 12px;
+  padding-right: 15px;
+  }
+
+  /* 个人中心 */
+  .top{
+    padding: 20rpx 0;
+    width: 100%;
+    height: 240rpx;
+    background-image: linear-gradient(to right, #FCD957, #F2BE44);
+ }
+ .auctor{
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+  
+.btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*  !important css样式最高级 */
+  width: 180rpx !important;
+  height: 180rpx!important;
+  line-height: 180rpx;
+  padding: 0;
+  border-radius: 50%;
+
+}
+.userName{
+  width: 100%;
+  text-align: center;
+  padding-top: 20rpx;
+  font-weight: bold;
+}

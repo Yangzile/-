@@ -1,0 +1,206 @@
+.record{
+  background-color: #E6E6E6;
+  padding-bottom: 20rpx;
+}
+/* 头部 */
+.header{
+  height: 160rpx;
+  background-color: #f4ea2a;
+}
+.content{
+ 
+ height: auto;
+ margin-top: -100rpx;
+ padding: 0 30rpx;
+}
+.type{
+  background: #fff;
+  height: 515rpx;
+  border-radius: 30rpx;
+  padding-top: 40rpx;
+  margin: 20rpx 0;
+}
+/* 支出收入标题 */
+.type .type-title {
+  width: 280rpx;
+  margin: 0 auto;
+  border: 1px solid #FEDB5A;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  box-sizing: border-box;  /* 什么意思 */
+  border-radius: 30rpx;
+  overflow: hidden;  /*隐藏超出浮动的 */
+ 
+}
+.title-item {
+  width: 50%;
+  font-size: 28rpx;
+}
+/* 选中状态 */
+.type .type-title .active{
+  background-color: #FEDB5A;
+}
+.account-choice .choice-item.active{
+  background-color: #FEDB5A;
+}
+/* 轮播图 */
+.swiper {
+  height: 230px;
+}
+.banner-content{
+  
+  flex-flow: row wrap;
+  height: 400rpx;
+  width: 100%;
+  /* background-color: bisque; */
+ 
+}
+/* 分类项 */
+.content-item{
+  /* overflow: hidden; */
+  /* padding-top: 20rpx; */
+  flex-direction: column;
+  margin-top: 60rpx;
+  float: left;
+  width: 25%;
+  height: 126rpx;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* background-color: aqua; */
+}
+/* 图标 */
+.item-icon{
+  
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+}
+/* 标题 */
+.item-title{
+  padding-top: 20rpx;
+  text-align: center;
+  line-height: 10px;
+  font-size: 12px;
+  height: 20%;
+/* background-color: brown; */
+}
+/* 图标大小 */
+.item-icon Image{
+width: 80rpx;
+height:80rpx;
+
+}
+.content-item.active .item-icon{
+  transform: scale(1.2);
+}
+.content-item.active .item-title{
+  font-weight: bold;
+   /* color: #4a4a4a;  */
+   color: red;
+ 
+}
+
+
+
+/* 账号选择 */
+.account{
+height: 150rpx;
+/* background-color: green; */
+background-color: #F7F7F7;
+border-radius: 20px;
+padding:20rpx 20rpx;
+margin: 20rpx 0;
+}
+.account-title{
+  height: 50%;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #999897;
+  font-weight: 600;
+}
+
+.choice-wenzi{
+  color: #777777;
+  margin-left: 10rpx;
+}
+.account-choice{
+margin-top: 10rpx;
+height: 50%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-flow: row nowrap;
+}
+.choice-item{
+  box-sizing: border-box;
+  padding: 5rpx 15rpx; 
+  border-radius: 25rpx;
+  color: #a1a1a1;
+  font-size: 12px;
+}
+/* 信息输入 */
+.info{
+/* background-color:red; */
+background-color: #F7F7F7;
+padding:20rpx 20rpx;
+border-radius: 20px;
+display: flex;
+justify-self: start;
+flex-direction: column;
+margin: 20rpx 0;
+
+}
+.info-box{
+  display: flex;
+  justify-content: start;
+  margin: 0 20rpx;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10rpx 0;
+  border-bottom: solid 1px  #999897;
+}
+.data-p{
+  display: flex;
+  justify-content: start;
+  
+}
+.money-input,.beizhu-input,.data-time{
+  margin-left: 20rpx;
+}
+/* .beizhu-input input,.money-input input{
+  color: #a1a1a1;
+  
+} */
+
+/* 保存按钮 */
+.save-box{
+  position: relative;
+  border-radius: 20rpx;
+  width: 400rpx;
+  height: 80rpx;
+  margin: 30rpx auto 60rpx;
+}
+.save{
+  height: 70rpx;
+  background-color:#f4ea2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  /* margin: 25rpx 50px; */
+
+}
+.btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400rpx !important;
+  height: 80rpx  !important;
+  border-radius: 20rpx;
+  padding: 0;
+  background-color: transparent;
+}

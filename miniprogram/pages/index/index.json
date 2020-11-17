@@ -1,0 +1,14 @@
+{
+  "usingComponents": {},
+  
+    "backgroundColor": "#353434",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "报表",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 10
+  
+  
+
+}

@@ -1,0 +1,261 @@
+.container canvas{
+  width: 100%;
+}
+.main{
+  /* padding: 0px 10rpx; */
+}
+/* 导航栏 */
+.nav{
+  /* width: 100%; */
+  height: 88rpx;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  padding: 0px 10px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+/* 年份大盒子 */
+.year{
+ 
+  height: 100%;
+  flex: 1;
+  /* position: relative; */
+  padding: 0rpx 15rpx;
+  /* background-color: yellow; */
+  overflow: hidden;
+
+}
+/* 月份大盒子 */
+.month{
+  /* background-color:yellow; */
+  flex: 3;
+}
+/* 日期大盒子 */
+.day{
+  /* background-color: yellow; */
+  flex: 1;
+}
+
+.year-title{
+  height: 100%;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;  /* 层级属性一定要和定位属性position配合使用*/
+  background-color: yellow;
+  font-size: 26rpx;
+}
+.year-title .title{
+  width: 80%;
+}
+.year-title image{
+  /* width: 25rpx; */
+  width: 15%;
+  height: 25rpx;
+  /* background-color: turquoise; */
+}
+
+.year-list{
+  left: 20px;
+  /* top: 70rpx; */
+  top: -640rpx;
+  margin: 0;
+  background-color: yellow;
+  position: absolute;
+  overflow-y: auto;
+  max-height: 640rpx;
+  transition: top 1s;
+
+  
+}
+.year-item{
+  width: 151rpx;
+  height: 80rpx;
+  /* background-color: yellow; */
+  padding: 15rpx 30rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 25px;
+}
+.month-list{
+
+  display: flex;
+  overflow-x: auto;
+  max-width: 400rpx;
+
+}
+.month-item{
+  width: 65rpx;
+  line-height: 88rpx;
+  font-size: 26rpx;
+  padding: 0rpx 20rpx;
+  flex-shrink:0;
+  text-align: center;
+  height: 100%;
+}
+.day{
+ 
+  position: relative;
+  height: 100%;
+  /* background-color: tomato; */
+  box-sizing: border-box;
+ 
+}
+.day image{
+  margin: 5rpx;
+  width: 35rpx;
+  height: 35rpx;
+  
+}
+
+.day-list{
+  width: 110rpx;
+  position: absolute;
+  right: 10rpx;
+  background-color: yellow;
+  top: -640rpx;
+  /* top:89rpx; */
+  /* top: 70rpx; */
+  max-height: 640rpx;  
+  overflow-y: auto;  /* 子元素超出则出现滚动条*/
+  transition: top 1s;
+  /* z-index:-1;  */
+}
+.day-item{
+  padding: 15rpx;
+  text-align: center;
+  font-size: 26rpx;
+  align-items: center;
+}
+.day-box{
+  /* height: 34px; */
+  /* height: 100%; */
+  display: flex;
+  padding: 10rpx 0rpx;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;  /* 层级属性一定要和定位属性position配合使用*/
+  background-color:yellow;
+  
+  overflow: hidden;
+}
+.xian{
+  width: 1px;
+  height: 38rpx;
+  background-color: #866A21;
+  margin: 15rpx 5rpx;
+}
+.shaixuan{
+  font-size: 26rpx;
+  /* line-height: 33px; */
+  flex-shrink:0;
+}
+.showyear{
+  top: 70rpx;
+}
+.showdate{
+  top: 89rpx;
+}
+.active{
+  /* background-color: red; */
+  font-weight: bold;
+}
+/* 年收入与支出 */
+/* .sum-year{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+.icnner-box{
+  margin: 0 20px;
+  border: solid black 1px;
+  border-radius: 30rpx;
+  width: 50%;
+
+  text-align: center;
+}
+.pay-box{
+  margin: 0 20px;
+  text-align: center;
+  border: solid  black 1px;
+  border-radius: 30rpx;
+  width: 50%;
+  
+}
+.pay-box.active{
+  border: solid #1F8167 2px;
+  
+}
+.icnner-box.active{
+  border: solid #FE5B62 2px;
+}
+.icnner-box .money {
+  color: #FE5B62
+}
+.pay-box .money {
+  color: #1F8167
+}
+.icnner-box .title,.pay-box .title{
+  font-weight: bold;
+  padding: 10rpx 0;
+  color: #444;
+}
+.icnner-box .money,.pay-box .money{
+  padding-bottom: 10rpx;
+  font-weight: bold;
+} */
+
+/* 标题 */
+.sum-year{
+  display: flex;
+  margin-top: 20rpx;
+
+}
+.title-item{
+  width: 50%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.title-item-content{
+  border: 1px solid transparent;
+  border-radius: 30rpx;
+  text-align: center;
+  
+}
+.title-text{
+  font-weight: bold;
+  padding: 10rpx 0;
+  color: #444;
+}
+.title-money{
+  padding-bottom: 10rpx;
+  font-weight: bold;
+}
+/* 收入框 */
+.act.shouru{
+  border-color: #FE5B62;
+}
+.shouru .title-money{
+  color: #FE5B62
+}
+
+/* 支出框 */
+.act.zhichu{
+  border-color: #1F8167;
+}
+.zhichu .title-money{
+  color: #1F8167
+}
+/* 图表 */
+.pie canvas{
+  width: 100%;
+  height: 700rpx;
+}

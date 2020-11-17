@@ -1,0 +1,207 @@
+/* @import "common.wxss"; 样式导入*/
+/* <view style="color:{{color}};"  动态样式写下wxml中/> */
+.header{
+
+height: 168px;
+/* background-color: #f4ea2a; */
+background-image: linear-gradient(to right,#f4f4ba,#f4ea2a);
+padding-left:30px ;
+position: sticky;
+top: 0px;
+left: 0px;
+padding-bottom: 60rpx;
+box-sizing: border-box;
+}
+.top{
+  padding-top:20px ;
+}
+.top-title{
+ color: #6b361a;
+ font-size: 16px;
+}
+.top-tatal{
+  font-weight: 600;
+  font-size: 30px;
+}
+.top-tatal .small{
+  font-size: 24px;
+}
+.bootm{
+display: flex;
+justify-content: space-around;
+align-items: center;
+color: #6b361a;
+}
+.bootm-item{
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  
+  /* background-color:red; */
+}
+
+.bootm-qian{
+
+  font-size: 34rpx;
+  color:#2e2d2c;
+  font-weight: bold;
+ 
+}
+.xian{
+  font-size: 30px;
+  font-weight: 300;
+  height: 100%;
+ 
+}
+.content{
+  
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  display: flex;
+  color: teal;
+  justify-content: space-between;
+  position: sticky;
+  top: 233px;
+  left: 0px;
+  background-color: #ffff;
+  box-sizing: border-box;
+}
+.biejin{
+  padding: 10px ;
+  /* height: 50px; */
+  position: sticky;
+  top: 168px;
+  left: 0px;
+  background-color: #ffff;
+ 
+}
+
+.date{
+ display: flex;
+align-content: center;
+/* padding: 20rpx 0; */
+}
+
+.date-title text{
+  font-size: 26rpx;
+  color: #A09F9D;
+  padding-right: 20rpx;
+}
+.more{
+  width: 10%;
+}
+.date-picker{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.more-item{
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+
+}
+.more-item text{
+  width: 8rpx;
+  height: 8rpx;
+  background-color: #9B9B9B;
+  border-radius: 50%;
+  margin: 0 5rpx;
+}
+.item{
+  width: calc(100% - 120rpx);
+  display: flex;
+  padding-right: 10px;
+  justify-content: space-between;
+  border-bottom:solid 1px rgb(196, 195, 195);
+}
+.item-list{
+  height: 45px;
+  padding: 5px 10px;
+  margin: 10rpx 0rpx;
+}
+.item-text{
+  padding-left: 10px;
+  top: 0px;
+  align-content: center;
+  overflow: hidden;
+}
+.text-title{
+  font-weight: 600;
+}
+.text-content{
+  font-size: 12px;
+  color: #9B9B9B;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  
+}
+
+.item-ico image{
+  width: 40px;
+  height: 40px;
+  
+ }
+ .moneny{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .income{
+    color: #fe5960;
+ }
+ .pay{
+  color: #00ad79;
+}
+
+ .search{
+  height: 35px;
+  padding: 5px 0px;
+  margin: 0px 15px;
+  background-color: #f4ea2a;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius:30px;
+ 
+ }
+ .recad{
+  width: 60%;
+  padding-right: 120rpx;
+
+ }
+ .text{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-end;
+ }
+ .tab-book{
+    font-size: 14px;
+    padding: 0 10rpx;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left:solid 1px #EDEDEF ;
+ }
+ .ico{
+   display: flex;
+   align-items: center;
+  height: 40px;
+ }
+ .text-cont{
+   line-height: 40px;
+ }
+ .search-bg{
+  width: 25px;
+  height: 25px;
+   /* background-color: red; */
+ }
+
+
+

@@ -1,0 +1,12 @@
+<navigator class="userInfo" url="/pages/login/login">
+  登录
+</navigator>
+<view class="user_info_wrap">
+  <view class="user_img_wrap">
+    <image class="user_bg" src="{{userInfo.avatarUrl}}" /> 
+    <view class="user_info">
+      <image class="user_icon" src="{{userInfo.avatarUrl}}"></image>
+      <view class="user_name"></view>
+    </view>
+  </view>
+</view>

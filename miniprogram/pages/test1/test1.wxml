@@ -1,0 +1,7 @@
+<video class="video" 
+src="cloud://yang-serve-ahcrg.7961-yang-serve-ahcrg-1302176514/moview.mp4" 
+controls="{{true}}"  muted="{{true}}" duration="10"></video>
+
+<view >
+  <Myheader></Myheader>
+</view>
